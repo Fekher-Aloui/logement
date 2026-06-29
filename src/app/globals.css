@@ -1,0 +1,27 @@
+/* ==========================================================================
+   RESPONSIVE NAVIGATION (Pour écrans d'ordinateurs et mobiles)
+   ========================================================================== */
+
+/* 1. Par défaut sur Grand Écran : Le bouton hamburger est masqué */
+.hamburger-btn {
+  display: none !important;
+}
+
+/* 2. Sur Petit Écran (Largeur inférieure à 768px) */
+@media (max-width: 768px) {
+  
+  /* On affiche le bouton hamburger (les 3 barres ou la croix) */
+  .hamburger-btn {
+    display: block !important;
+  }
+
+  /* Par défaut, on cache la liste des liens */
+  .nav-menu-links {
+    display: none !important;
+  }
+
+  /* Si l'état 'isOpen' est activé, la classe '.open' est ajoutée et on affiche le menu */
+  .nav-menu-links.open {
+    display: flex !important;
+  }
+}
