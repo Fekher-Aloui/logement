@@ -1,27 +1,38 @@
-/* ==========================================================================
-   RESPONSIVE NAVIGATION (Pour écrans d'ordinateurs et mobiles)
-   ========================================================================== */
+@import "tailwindcss";
 
-/* 1. Par défaut sur Grand Écran : Le bouton hamburger est masqué */
-.hamburger-btn {
-  display: none !important;
+:root {
+  --header-height: 80px;
 }
 
-/* 2. Sur Petit Écran (Largeur inférieure à 768px) */
-@media (max-width: 768px) {
-  
-  /* On affiche le bouton hamburger (les 3 barres ou la croix) */
-  .hamburger-btn {
-    display: block !important;
-  }
+body {
+  padding-top: var(--header-height);
+  margin: 0;
+}
 
-  /* Par défaut, on cache la liste des liens */
-  .nav-menu-links {
-    display: none !important;
-  }
+main {
+  min-height: calc(100vh - var(--header-height));
+}
+/* Ajout pour uniformiser les inputs */
+input {
+  color: white;
+  transition: border-color 0.3s;
+}
 
-  /* Si l'état 'isOpen' est activé, la classe '.open' est ajoutée et on affiche le menu */
-  .nav-menu-links.open {
-    display: flex !important;
-  }
+input:focus {
+  border-color: #ef4444; /* Rouge de votre bouton */
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Supprime les marges par défaut pour éviter la bande blanche */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111827; /* Couleur gris très foncé */
+  color: white;
 }

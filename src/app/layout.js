@@ -1,6 +1,5 @@
-// src/app/layout.js
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer"; // Import du footer
+import Footer from "../components/Footer";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -9,7 +8,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main>{children}</main>
-        <Footer /> {/* Ajout du footer ici */}
+        <Footer />
       </body>
     </html>
   );
